@@ -6,3 +6,5 @@ PigTest1
 3.this is from eclipse
 4.this change is from "push to upstream"
 5.this change is from "push to upstream" too
+6.this change is from xp bash;
+
