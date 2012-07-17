@@ -1,6 +1,7 @@
 PigTest1
 ========
 
-just first test pro
+1.this is  first change log
+2.this changge is from bash
+3.this is from eclipse
 
-change from eclipse
