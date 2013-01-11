@@ -32,10 +32,6 @@ public:
     void alignSpritesLeft(unsigned int numberOfSprites);
     virtual std::string title();
     virtual std::string subtitle();
-
-    void restartCallback(CCObject* pSender);
-    void nextCallback(CCObject* pSender);
-    void backCallback(CCObject* pSender);
 };
 
 class PageLayer1 : public PageTurnLayer
