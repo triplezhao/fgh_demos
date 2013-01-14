@@ -8,8 +8,9 @@ using namespace cocos2d;
 
 void PageTurnScene::runThisTest()
 {
-    CCLayer* pLayer =   pLayer = new PageLayer1();
-    addChild(pLayer);
+   //CCLayer* pLayer =   pLayer = new PageLayer1();
+   CCLayer* pLayer =   pLayer = new PageTurnLayer(); 
+	addChild(pLayer);
 
     CCDirector::sharedDirector()->replaceScene(this);
 }
@@ -30,22 +31,17 @@ void PageTurnLayer::onEnter()
     CCLayer::onEnter();
 
     // Or you can create an sprite using a filename. only PNG is supported now. Probably TIFF too
-    m_grossini = CCSprite::create(s_pPathGrossini);
-    m_grossini->retain();
+    spr_s_back = CCSprite::create(s_back);
+    addChild(spr_s_back);
 
-    m_tamara = CCSprite::create(s_pPathSister1); 
-    m_tamara->retain();
 
-    m_kathia = CCSprite::create(s_pPathSister2);
-    m_kathia->retain();
+	//add page turn action
 
-    addChild(m_grossini, 1);
-    addChild(m_tamara, 2);
-    addChild(m_kathia, 3);
-
-    m_grossini->setPosition(ccp(VisibleRect::center().x, VisibleRect::bottom().y+VisibleRect::getVisibleRect().size.height/3));
-    m_tamara->setPosition(ccp(VisibleRect::center().x, VisibleRect::bottom().y+VisibleRect::getVisibleRect().size.height*2/3));
-    m_kathia->setPosition(ccp(VisibleRect::center().x, VisibleRect::bottom().y+VisibleRect::getVisibleRect().size.height/2)); 
+	int x,y;
+	x=16;
+	y=12;
+	CCActionInterval *action  =  CCPageTurn3D::create(ccg(x,y), 2);
+	spr_s_back->runAction(action);
 
     // add title and subtitle
     std::string str = title();
@@ -91,10 +87,11 @@ void PageTurnLayer::onExit()
 // ActionManual
 //
 //------------------------------------------------------------------
+/*
 void PageLayer1::onEnter()
 {
     PageTurnLayer::onEnter();
-
+	
     CCSize s = CCDirector::sharedDirector()->getWinSize();
 
     m_tamara->setScaleX( 2.5f);
@@ -108,12 +105,14 @@ void PageLayer1::onEnter()
 
     m_kathia->setPosition( ccp(s.width-100, s.height/2));
     m_kathia->setColor( ccBLUE);
-}
 
+}
+	*/
+/*
 std::string PageLayer1::subtitle()
 {
     return "Manual Transformation";
 }
-
+*/
 
 

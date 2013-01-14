@@ -17,7 +17,8 @@ static TestScene* CreateTestScene(int nIdx)
     {
     case TEST_ACTIONS:
         pScene = new ActionsTestScene(); break;
-   
+    case TEST_PAGETURN:
+        pScene = new PageTurnScene(); break;
     default:
         break;
     }

@@ -21,9 +21,8 @@ public:
 class PageTurnLayer : public CCLayer
 {
 protected:
-    CCSprite*    m_grossini;
-    CCSprite*    m_tamara;
-    CCSprite*    m_kathia;
+    CCSprite*    spr_s_back;
+    
 public:
     virtual void onEnter();
     virtual void onExit();
@@ -33,12 +32,13 @@ public:
     virtual std::string title();
     virtual std::string subtitle();
 };
-
+/*
 class PageLayer1 : public PageTurnLayer
 {
 public:
     virtual void onEnter();
     virtual std::string subtitle();
 };
+*/
 
 #endif  // __PAGETURN_SCENE

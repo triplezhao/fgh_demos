@@ -407,10 +407,10 @@ void ActionRotationalSkew::onEnter()
 
     this->centerSprites(3);
 
-    CCRotateTo* actionTo = CCRotateTo::create(2, 37.2f, -37.2f);
-    CCRotateTo* actionToBack = CCRotateTo::create(2, 0, 0);
-    CCRotateBy* actionBy = CCRotateBy::create(2, 0.0f, -90.0f);
-    CCRotateBy* actionBy2 = CCRotateBy::create(2, 45.0f, 45.0f);
+    CCRotateTo* actionTo = CCRotateTo::create( 37.2f, -37.2f);
+    CCRotateTo* actionToBack = CCRotateTo::create( 0, 0);
+    CCRotateBy* actionBy = CCRotateBy::create( 0.0f, -90.0f);
+    CCRotateBy* actionBy2 = CCRotateBy::create( 45.0f, 45.0f);
     CCRotateBy* actionByBack = (CCRotateBy*)actionBy->reverse();
 
     m_tamara->runAction(CCSequence::create(actionTo, actionToBack, NULL));
@@ -462,8 +462,8 @@ void ActionRotationalSkewVSStandardSkew::onEnter()
     label = CCLabelTTF::create("Rotational Skew", "Marker Felt", 16);
     label->setPosition(ccp(s.width/2, s.height - 250 + label->getContentSize().height/2));
     this->addChild(label);
-    CCRotateBy* actionTo2 = CCRotateBy::create(2, 360, 0);
-    CCRotateBy* actionToBack2 = CCRotateBy::create(2, -360, 0);
+    CCRotateBy* actionTo2 = CCRotateBy::create( 360, 0);
+    CCRotateBy* actionToBack2 = CCRotateBy::create( -360, 0);
     box->runAction(CCSequence::create(actionTo2, actionToBack2, NULL));
 }
 std::string ActionRotationalSkewVSStandardSkew::subtitle()
