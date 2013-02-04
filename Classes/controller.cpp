@@ -15,8 +15,10 @@ static TestScene* CreateTestScene(int nIdx)
 
     switch (nIdx)
     {
-    case TEST_ACTIONS:
+	case TEST_ACTIONS:
         pScene = new ActionsTestScene(); break;
+    case TEST_MOTIONSTREAK:
+        pScene = new MotionStreakScene(); break;
     case TEST_PAGETURN:
         pScene = new PageTurnScene(); break;
     default:

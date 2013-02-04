@@ -3,12 +3,13 @@
 
 #include "PageTurnTest/PageTurnScene.h"
 #include "ActionsTest/ActionsTest.h"
+#include "MotionStreakTest/MotionStreak.h"
 
 enum
 {
     TEST_PAGETURN = 0,
 	TEST_ACTIONS,
-	TEST_ACTIONS1,
+	TEST_MOTIONSTREAK,
 	TEST_ACTIONS2,
 	TEST_ACTIONS3,
 	TEST_ACTIONS4,
@@ -21,17 +22,17 @@ enum
 };
 
 const std::string g_aTestNames[TESTS_COUNT] = {
-    "PageturnTest",
-	 "ActionsTest",
-	  "TestNull",
-	  "TestNull",
-	  "TestNull",
-	  "TestNull",
-	  "TestNull",
-	  "TestNull",
-	  "TestNull",
-	  "TestNull",
-	  "TestNull"
+	"PageturnTest",
+	"ActionsTest",
+	"MotionStreakTest",
+	"TestNull",
+	"TestNull",
+	"TestNull",
+	"TestNull",
+	"TestNull",
+	"TestNull",
+	"TestNull",
+	"TestNull"
 	 
 };
 
